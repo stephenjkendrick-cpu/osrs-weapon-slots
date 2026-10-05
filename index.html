@@ -170,7 +170,7 @@
           <div class="value" id="resWeaponName"></div>
         </div>
         <div class="card performer">
-          <img id="resPerfImg" alt="">
+          <a id="resPerfLink" href="#" target="_blank" rel="noopener"><img id="resPerfImg" alt=""></a>
           <div class="label">Wielder</div>
           <div class="value" id="resPerfName"></div>
         </div>
@@ -311,6 +311,7 @@ async function spin() {
   document.getElementById('resWeaponName').textContent = wRes.n;
   document.getElementById('resPerfImg').src = pRes.i;
   document.getElementById('resPerfName').textContent = pRes.n;
+  document.getElementById('resPerfLink').href = 'https://www.google.com/search?q=' + encodeURIComponent(pRes.n + ' pornstar');
   resultCards.classList.add('show');
   captionEl.innerHTML = '<strong>' + escapeHtml(pRes.n) + '</strong> would wield the <strong>' + escapeHtml(wRes.n) + '</strong>';
   captionEl.classList.add('show');
