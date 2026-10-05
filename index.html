@@ -329,6 +329,15 @@ async function spin() {
 }
 
 spinBtn.addEventListener('click', spin);
+performerReel.addEventListener('click', e => {
+  if (spinning) return;
+  const cell = e.target.closest('.cell');
+  if (!cell) return;
+  const nm = cell.querySelector('.name');
+  if (!nm) return;
+  window.open('https://www.google.com/search?q=' + encodeURIComponent(nm.textContent + ' pornstar anal'), '_blank', 'noopener');
+});
+performerReel.style.cursor = 'pointer';
 
 (async function init() {
   try {
